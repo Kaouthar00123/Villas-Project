@@ -1,0 +1,161 @@
+/* Font family, Color palette, standarD margin and padding */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+:root {
+  --primary-color: #102c57;
+  --secondary-color: #dac0a3;
+  --hover-color: #16181a;
+  --active-color: #f35525;
+}
+* {
+  font-family: "Roboto Slab", system-ui;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Hérite de la couleur du texte parent */
+}
+a:hover {
+  color: var(--active-color);
+}
+.nav-link:hover {
+  color: var(--active-color) !important;
+}
+.nav-link.active {
+  color: red;
+}
+
+.btn-card:hover {
+  background-color: var(--active-color) !important;
+}
+.card:hover {
+  box-shadow: 10px 10px 10px rgb(180 175 175) !important;
+}
+.card-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.card-title:hover {
+  color: var(--active-color) !important;
+}
+.fadeOut {
+  opacity: 0;
+}
+#test:hover {
+  opacity: 0;
+}
+.carousel-item {
+  transition-duration: 0.5s; /* Réduit la durée à 0.5 seconde */
+}
+#btntest {
+  width: var(--bs-breakpoint-sm);
+  background-color: black;
+}
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#list-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  transition: height 2s ease-in-out;
+}
+#btn-menu {
+  border-color: transparent;
+  background-color: transparent;
+}
+#before-topnav {
+  margin: 0px 3rem 1rem 3rem;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+nav#top-menu {
+  border-top: 1px solid #b9b5b5;
+  margin: 0 2rem 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  margin: 0 -1rem 1rem;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.card {
+  min-width: fit-content;
+}
+.col {
+  max-width: 400px;
+}
+.details {
+  min-width: fit-content;
+  flex-wrap: wrap;
+}
+.contact-page {
+  min-width: fit-content;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 2rem;
+}
+
+.title-section {
+  width: 30%;
+  margin: 3rem auto 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.mini-title-section {
+  padding-left: 1rem;
+  color: #f35525;
+  border-left: 1px solid #f35525;
+}
+.big-title-section {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+}
+
+/* Media query , calc(var(--bs-breakpoint-sm)) = 576px */
+@media screen and (max-width: 600px) {
+  /* cache menu and show buttom */
+  #before-topnav {
+    display: none;
+  }
+  #list-menu {
+    display: none;
+  }
+  #btn-menu {
+    display: flex;
+  }
+  nav#top-menu {
+    border: 0;
+  }
+  #images {
+    height: 95vw;
+    width: 80vw;
+  }
+}
